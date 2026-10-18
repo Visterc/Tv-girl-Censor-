@@ -5,14 +5,14 @@ color[] colArray = {
   color(255,105,180)
 };
 
-int maxStamps = 300;            // quantidade maxima de quads que pode ser colocado
-float[] px = new float[maxStamps]; // memoria da posiçao X
-float[] py = new float[maxStamps]; // memoria da posiçao Y
-int count = 0;                  // quantidade de quads colocados
+int maxStamps = 300;            
+float[] px = new float[maxStamps]; 
+float[] py = new float[maxStamps]; 
+int count = 0;                  
 
-float lastX = -1000; // lembra da ultima posiçao do teu quad pra o X
-float lastY = -1000; // lembra da ultima posiçao do teu quad pra o Y
-float spacing = 60;             // o quao longe o mouse tem que se mover para colocar o proximo quad
+float lastX = -1000; 
+float lastY = -1000; 
+float spacing = 60;           
 
 void setup(){
   size(600, 560);
@@ -25,7 +25,7 @@ void setup(){
 void draw(){
   background(bg);
 
-  // coloca um novo quad se o mouse moveu o suficiente 
+
   if (dist(mouseX, mouseY, lastX, lastY) > spacing && count < maxStamps) {
     px[count] = mouseX;
     py[count] = mouseY;
