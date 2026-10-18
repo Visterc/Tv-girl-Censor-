@@ -18,6 +18,7 @@ void setup(){
   size(600, 560);
   noFill();
   bg = loadImage("TvGirlll.png");
+  bg.resize(width, height);
   strokeWeight(3);
   frameRate(20);
 }
